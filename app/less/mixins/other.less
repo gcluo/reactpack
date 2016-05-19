@@ -1,0 +1,20 @@
+.position(@position; @top; @right; @bottom; @left;){
+  position: @position;
+  top: @top;
+  right: @right;
+  bottom: @bottom;
+  left: @left;
+}
+.relative(@top; @right; @bottom; @left;){
+  .position(relative; @top; @right; @bottom; @left;);
+}
+.absolute(@top; @right; @bottom; @left;){
+  .position(absolute; @top; @right; @bottom; @left;);
+}
+.fixed(@top; @right; @bottom; @left;){
+  .position(fixed; @top; @right; @bottom; @left;);
+}
+.size(@width; @height){
+  width: @width;
+  height: @height;
+}

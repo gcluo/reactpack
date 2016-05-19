@@ -1,0 +1,50 @@
+.button-default(@border-radius: 4px){
+  .border-top-radius(@border-radius);
+  .border-bottom-radius(@border-radius);
+  font-weight: lighter;
+  outline: 0;
+}
+.solid-button-default(@border-color;@background-color;@color;@font-size;@height;@width;@hover-color;@active-color;@disable-border-color;@disable-background-color;@disable-font-color;){
+  .button-default();
+  border: 1px solid @border-color;
+  background-color: @background-color;
+  color: @color;
+  font-size: @font-size;
+  height: @height;
+  width: @width;
+  &:hover{
+    background-color: @hover-color;
+    border: 1px solid @hover-color;
+  }
+  &:active{
+    background-color: @active-color;
+    border: 1px solid @active-color;
+  }
+  &.disable{
+    border: 1px solid @disable-border-color;
+    background-color: @disable-background-color;
+    color: @disable-font-color;
+  }
+}
+.line-button-default(@border-color;@background-color;@color;@font-size;@height;@width;@hover-color;@active-color;@disable-border-color;@disable-background-color;@disable-font-color){
+  .button-default();
+  border: 1px solid @border-color;
+  background-color: @background-color;
+  color: @color;
+  font-size: @font-size;
+  height: @height;
+  width: @width;
+  &:hover{
+    border: 1px solid @hover-color;
+    color: @hover-color;
+  }
+  &:active{
+    border: 1px solid @active-color;
+    color: @active-color;
+  }
+  &.disable{
+    border: 1px solid @disable-border-color;
+    background-color: @disable-background-color;
+    color: @disable-font-color;
+  }
+}

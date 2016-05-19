@@ -1,0 +1,123 @@
+.input-normal{
+  border: 1px solid @CG5;
+  border-radius: 4px;
+  color: @CG5;
+  font-size: @FS8;
+  font-weight: lighter;
+  height: 44px;
+  outline: 0;
+  padding-left: 12px;
+  &:focus{
+    border: 1px solid @CGN3;
+    color: @CGN3;
+  }
+  &:disabled{
+    background-color: @CG3;
+    color: @CG6;
+  }
+  &.error{
+    border: 1px solid @CR4;
+    color: @CR4;
+  }
+  &.disable-lock{
+    background-color: @CG3;
+    color: @CG6;
+    padding-right: 12px;
+    position: relative;
+    &:after{
+      content: '\e609';
+      color: @CG6;
+      font-family: 'iconfont';
+      display: inline-block;
+      position: absolute;
+    }
+  }
+}
+
+.input-lock{
+  position: relative;
+  &.input-normal{
+    padding-right: 12px;
+  }
+  &:after{
+    content: '\e600';
+    color: @CG6;
+    font-family: 'iconfont';
+    font-size: @FS4;
+    display: inline-block;
+    position: absolute;
+    right: 10px;
+    top: -5px;
+  }
+}
+
+.check-box{
+  display: inline-block;
+  >input[type=checkbox]{
+    display: none;
+    &:checked + label{
+      border: 1px solid @CGN3;
+      background-color: @CGN3;
+    }
+    &:disabled + label{
+      background-color: @CG5;
+    }
+  }
+  >label{
+    .size(14px;14px);
+    border: 1px solid @CG5;
+    border-radius: 2px;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    &:before{
+      content: '\e604';
+      color: @white;
+      display: inline-block;
+      font-family: 'iconfont';
+      font-size: @FS9;
+      left: 0;
+      position: absolute;
+      top: -3px;
+    }
+  }
+}
+
+.check-circle{
+  display: inline-block;
+  >input[type=checkbox]{
+    display: none;
+    &:checked + label{
+      border-color: @CGN3;
+      &:before{
+        display: inline-block;
+      }
+    }
+    &:disabled + label{
+      &:before{
+        background-color: @CG5;
+        display: inline-block;
+      }
+    }
+  }
+  >label{
+    .size(14px;14px);
+    border: 1px solid @CG5;
+    border-radius: 50%;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    &:before{
+      .size(6px; 6px);
+      border-radius: 50%;
+      content: '';
+      background-color: @CGN3;
+      display: none;
+      left: 50%;
+      margin-left: -3px;
+      margin-top: -3px;
+      position: absolute;
+      top: 50%;
+    }
+  }
+}

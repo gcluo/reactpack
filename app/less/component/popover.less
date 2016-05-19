@@ -1,0 +1,125 @@
+.popover-input{
+  background-color: @CGN1;
+  border-radius: 4px;
+  color: @CG8;
+  display: inline-block;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-top: 5px;
+  position: relative;
+  width: 170px;
+  min-height: 50px;
+  &:before{
+    border-top: 10px solid transparent;
+    border-right: 14px solid @CGN1;
+    border-bottom: 10px solid transparent;
+    content: '';
+    display: inline-block;
+    height: 0;
+    position: absolute;
+    width: 0;
+    left: -14px;
+    top: 50%;
+    margin-top: -13px;
+  }
+  .message{
+    color: @CG8;
+    display: block;
+    font-size: @FS9;
+    height: 25px;
+    line-height: 25px;
+    &>i{
+      font-size: @FS6;
+      padding-right: 6px;
+    }
+    &>.icon-wrong{
+      color: @CR4;
+    }
+    &>.icon-success{
+      color: @CGN3;
+    }
+  }
+}
+
+.popover-info{
+  color: @CG4;
+  font-size: @FS5;
+  position: relative;
+  &>.info-message{
+    .size(250px; 120px);
+    border: 1px solid @CG4;
+    background-color: @CG1;
+    display: none;
+    left: 30px;
+    margin-top: -60px;
+    padding: 10px;
+    position: absolute;
+    top: 50%;
+    &:before{
+      .size(12px; 12px);
+      border-bottom: 1px solid @CG4;
+      border-left: 1px solid @CG4;
+      background-color: @CG1;
+      content: '';
+      display: inline-block;
+      position: absolute;
+      left: -6px;
+      top: 50%;
+      margin-top: -6px;
+      transform: rotate(45deg);
+    }
+  }
+  .info-table{
+    width: 100%;
+    text-align: center;
+    thead{
+      background-color: @CG3;
+    }
+    th,td{
+      padding-bottom: 10px;
+      padding-top: 10px;
+    }
+    th{
+      color: @CG6;
+      font-size: @FS8;
+    }
+    td{
+      color: @CG8;
+      font-size: @FS9;
+    }
+  }
+  &:hover{
+    color: @CGN3;
+  }
+  &:hover > .info-message{
+    display: inline-block;
+  }
+}
+
+.popover-prompts{
+  background-color: @CY1;
+  color: @CY3;
+  display: inline-block;
+  font-size: @FS8;
+  height: 48px;
+  line-height: 48px;
+  padding-left: 30px;
+  padding-right: 30px;
+  position: relative;
+  .close{
+    .size(14px;14px);
+    border: 0;
+    background-color: @CY1;
+    color: @CY3;
+    cursor: pointer;
+    float: right;
+    font-size: @FS4;
+    outline: 0;
+    right: 0;
+  }
+  .config{
+    color: @CY3;
+    cursor: pointer;
+    font-size: @FS8;
+  }
+}

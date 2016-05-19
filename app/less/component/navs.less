@@ -1,0 +1,154 @@
+.nav-default{
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  >li{
+    display: block;
+    >a{
+      &:hover,
+      &:focus {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.nav-bar{
+  .nav-default;
+  .clearfix;
+  >li{
+    border-bottom: 1px solid @CG4;
+    border-left: 1px solid @CG4;
+    border-top: 1px solid @CG4;
+    float: left;
+    height: 48px;
+    width: 112px;
+    &:last-child{
+      border-right: 1px solid @CG4;
+    }
+    &.active{
+      >a{
+        background-color: @CG4;
+      }
+    }
+    >a{
+      color: @CG8;
+      display: block;
+      font-size: @FS5;
+      height: 48px;
+      line-height: 48px;
+      text-align: center;
+      &:hover{
+        background-color: @CG4;
+      }
+    }
+  }
+}
+
+.nav-tab-line{
+  .nav-default;
+  .clearfix;
+  >li{
+    border-top: 1px solid @CG4;
+    border-bottom: 1px solid @CG4;
+    float: left;
+    height: 56px;
+    line-height: 50px;
+    text-align: center;
+    width: 112px;
+    &:first-child{
+      border-left: 1px solid @CG4;
+    }
+    &:last-child{
+      border-right: 1px solid @CG4;
+    }
+    &:hover{
+      a>{
+        border-bottom: 2px solid @CGN3;
+        color: @CGN3;
+      }
+    }
+    &.active{
+      >a{
+        border-bottom: 2px solid @CGN3;
+        color: @CGN3;
+      }
+    }
+    >a{
+      color: @CG8;
+      font-size: @FS6;
+      padding-left: 4px;
+      padding-right: 4px;
+      padding-bottom: 6px;
+    }
+  }
+}
+
+.nav-tab{
+  .nav-default;
+  .clearfix;
+  >li{
+    border-top: 1px solid @CG4;
+    border-bottom: 1px solid @CG4;
+    float: left;
+    height: 56px;
+    line-height: 56px;
+    text-align: center;
+    width: 112px;
+    &:first-child{
+      border-left: 1px solid @CG4;
+    }
+    &:last-child{
+      border-right: 1px solid @CG4;
+    }
+    &.active{
+      >a{
+        color: @CGN3;
+      }
+    }
+    >a{
+      color: @CG5;
+      display: block;
+      font-size: @FS6;
+      &:hover{
+        color: @CGN3;
+      }
+    }
+  }
+}
+
+.nav-menu-line{
+  .nav-default;
+  .clearfix;
+  >li{
+    border-left: 1px solid @CG4;
+    border-right: 1px solid @CG4;
+    border-bottom: 1px solid @CG4;
+    height: 56px;
+    line-height: 56px;
+    text-align: center;
+    width: 200px;
+    &:first-child{
+      border-top: 1px solid @CG4;
+    }
+    &:hover{
+      border-left: 3px solid @CGN3;
+      border-right: 0;
+      >a{
+        color: @CGN3;
+      }
+    }
+    &.active{
+      border-left: 3px solid @CGN3;
+      border-right: 0;
+      >a{
+        color: @CGN3;
+      }
+    }
+    >a{
+      color: @CG7;
+      display: block;
+      font-size: @FS6;
+    }
+  }
+}

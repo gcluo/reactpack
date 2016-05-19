@@ -1,0 +1,102 @@
+.toggle-button{
+  display: inline-block;
+  >input[type=checkbox]{
+    display: none;
+    &:checked + label{
+      background-color: @CGN3;
+      &:before{
+        left: 37px;
+      }
+    }
+    &:disabled + label{
+      background-color: @CG4;
+    }
+  }
+  >label{
+    .size(80px; 35px);
+    border: 0;
+    background-color: @CG4;
+    border-radius: 17px;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    &:before{
+      .size(40px; 30px);
+      content: '';
+      background-color: @white;
+      border-radius: 15px;
+      display: inline-block;
+      left: 3px;
+      position: absolute;
+      top: 50%;
+      transition: left .5s;
+      margin-top: -15px;
+    }
+  }
+}
+
+.toggle-button-up-down{
+  color: @CG5;
+  font-size: @FS8;
+  position: relative;
+  &:before{
+    .size(8px; 8px);
+    content: '';
+    border-left: 2px solid @CG5;
+    border-bottom: 2px solid @CG5;
+    display: inline-block;
+    margin-top: -6px;
+    position: absolute;
+    right: -16px;
+    top: 50%;
+    transform: rotate(-45deg);
+  }
+  &.up{
+    &:before{
+      margin-top: -3px;
+      transform: rotate(135deg);
+    }
+  }
+}
+
+.toggle-panel{
+  border: 1px solid @CG3;
+  width: 700px;
+  .panel-header{
+    background-color: @CG1;
+    font-size: @FS6;
+    color: @CG7;
+    height: 50px;
+    line-height: 50px;
+    padding-left: 30px;
+    padding-right: 30px;
+    position: relative;
+    &:before{
+      border-left: 10px solid transparent;
+      border-top: 14px solid @CG7;
+      border-right: 10px solid transparent;
+      content: '';
+      display: inline-block;
+      height: 0;
+      position: absolute;
+      width: 0;
+      right: 40px;
+      top: 50%;
+      margin-top: -7px;
+    }
+    &.active{
+      &:before{
+        border-top: 0;
+        border-bottom: 14px solid @CG7;
+      }
+    }
+    &.active + .panel-body{
+      display: block;
+    }
+  }
+  .panel-body{
+    background-color: @white;
+    display: none;
+    min-height: 50px;
+  }
+}

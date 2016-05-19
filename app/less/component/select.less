@@ -1,0 +1,138 @@
+.select{
+  display: inline-block;
+  position: relative;
+  width: 150px;
+  .select-header{
+    background-color: @white;
+    border: 1px solid @CG5;
+    border-radius: 4px;
+    color: @CG5;
+    cursor: pointer;
+    height: 44px;
+    line-height: 44px;
+    padding-right: 24px;
+    padding-left: 12px;
+    position: relative;
+    text-align: left;
+    width: 100%;
+    &:before{
+      border-left: 7px solid transparent;
+      border-top: 10px solid @CG6;
+      border-right: 7px solid transparent;
+      content: '';
+      display: inline-block;
+      height: 0;
+      position: absolute;
+      width: 0;
+      right: 14px;
+      top: 50%;
+      margin-top: -5px;
+    }
+    &.active{
+      border: 0;
+      border-radius: 0;
+      border-left: 1px solid @CG5;;
+      border-right: 1px solid @CG5;;
+      border-top: 1px solid @CG5;
+      border-bottom: 1px solid @CG5;
+      border-top-left-radius: 4px;
+      border-top-right-radius: 4px;
+      &:before{
+        border-top: 0;
+        border-bottom: 10px solid @CG6;
+      }
+    }
+    &.selected{
+      color: @CG8;
+    }
+    &.active + .select-body{
+      display: block;
+    }
+  }
+  .select-body{
+    .nav-default;
+    border-left: 1px solid @CG5;
+    border-right: 1px solid @CG5;
+    border-bottom: 1px solid @CG5;
+    display: none;
+    position: absolute;
+    width: 100%;
+    >li{
+      color: @CG7;
+      cursor: pointer;
+      font-size: @FS8;
+      font-weight: lighter;
+      height: 44px;
+      line-height: 44px;
+      padding-right: 24px;
+      padding-left: 12px;
+      text-align: left;
+      &.selected{
+        color: @CGN3;
+      }
+      &:hover{
+        color: @CG7;
+        background-color: @CGN3;
+      }
+    }
+  }
+}
+
+.select-popover{
+  display: inline-block;
+  position: relative;
+  .select-header{
+    color: @CG8;
+    cursor: pointer;
+    display: inline-block;
+    font-size: @FS8;
+    padding-right: 20px;
+    position: relative;
+    width: 100%;
+    &:before{
+      content: '\e607';
+      color: @CG5;
+      font-family: 'iconfont';
+      font-size: @FS8;
+      position: absolute;
+      right: 0;
+    }
+    &.active{
+      &:before{
+        transform: rotate(180deg);
+      }
+    }
+    &.active + .select-body{
+      display: block;
+    }
+  }
+  .select-body{
+    .nav-default;
+    border: 1px solid @CG4;
+    border-radius: 2px;
+    display: none;
+    position: absolute;
+    right: 0;
+    width: 70%;
+    li{
+      cursor: pointer;
+      height: 36px;
+      text-align: center;
+      >a{
+        display: block;
+        color: @CG8;
+        padding-bottom: 10px;
+        padding-top: 10px;
+      }
+      &:hover{
+        background-color: @CG2;
+      }
+      &:last-child{
+        border-top: 1px solid @CG4;
+        >a{
+          color: @CR4;
+        }
+      }
+    }
+  }
+}
