@@ -1,16 +1,47 @@
 'use strict';
 import React from 'react';
-import { Router, Route, Link, IndexRoute, Redirect } from 'react-router';
-import { createHistory, createHashHistory, useBasename } from 'history';
+import {Link} from 'react-router';
 
-export default class Nav extends React.Component{
-  render(){
-    return  (
-      <ul className="nav-menu-line">
-        <li className="active"><Link to="/">Index</Link></li>
-        <li><Link to="/about">About</Link></li>
-        <li><Link to="/inbox">Inbox</Link></li>
+export default class Nav extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      selected: 'index'
+    };
+  }
+  click(e) {
+    let link = e.target.text;
+    switch (link) {
+      case 'About':
+        this.setState({selected: 'about'});
+        break;
+      case 'Inbox':
+        this.setState({selected: 'inbox'});
+        break;
+      default:
+        this.setState({selected: 'index'});
+        break;
+    }
+  }
+  render() {
+    return (
+      <ul className="nav-menu-line" onClick={this.click.bind(this)}>
+        <li className={'index' === this.state.selected
+          ? 'active'
+          : ''}>
+          <Link to="/">Index</Link>
+        </li>
+        <li className={'about' === this.state.selected
+          ? 'active'
+          : ''}>
+          <Link to="/about">About</Link>
+        </li>
+        <li className={'inbox' === this.state.selected
+          ? 'active'
+          : ''}>
+          <Link to="/inbox">Inbox</Link>
+        </li>
       </ul>
-  );
+    );
   }
 }
