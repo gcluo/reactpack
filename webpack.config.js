@@ -13,7 +13,7 @@ var config = {
   ],
   output: {
     path: path.resolve(__dirname, 'build'),
-    filename: 'bundle.js',
+    filename: 'app.js',
   },
   resolve: {
     extensions: ['', '.js', '.jsx'],
@@ -47,7 +47,7 @@ var config = {
       loader: 'style!css!less'
     }, {
       test: /\.(png|jpg)$/,
-      loader: 'url?limit=25000'
+      loader: 'url?limit=25000&name=assets/images/[name].[ext]'
     }, {
       test: /\.ttf$/,
       loader: 'url?limit=100000'

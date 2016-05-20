@@ -6,19 +6,20 @@ import Index from './modules/index.jsx';
 import About from './modules/about.jsx';
 import Inbox from './modules/inbox.jsx';
 import {Router, Route, Link, IndexRoute, Redirect} from 'react-router';
-
+var src = require('./assets/images/22.jpg');
 export default class Dashboard extends React.Component {
   render() {
     return (
       <div>
         <h1>welcome to index!</h1>
+        <img src={src} alt="123"/>
       </div>
     );
   }
 }
 main();
 function main() {
-  React.render((
+  ReactDOM.render((
     <Router>
       <Route path="/" component={Index}>
         <IndexRoute component={Dashboard}/>
