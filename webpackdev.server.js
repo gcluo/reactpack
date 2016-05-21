@@ -5,9 +5,7 @@ var proxy = require('proxy-middleware');
 var url = require('url');
 
 module.exports = function(app) {
-  // 使用8081端口
   app.use('/js', proxy(url.parse('http://localhost:8081/js')));
-
   var server = new WebpackDevServer(webpack(config), {
     contentBase: __dirname,
     hot: true,

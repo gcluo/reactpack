@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack",
-    "dev": "webpack-dev-server --devtool eval --progress --colors --hot --content-base app",
+    "dev": "gulp watch & NODE_ENV=dev node app",
     "deploy": "NODE_ENV=production webpack -p --config webpack.production.config.js && cp build/index.html dist/index.html"
   },
   "author": "",

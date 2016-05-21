@@ -11,4 +11,7 @@
       .pipe($.less())
       .pipe(gulp.dest('app/css'));
   });
+  gulp.task('watch', function() {
+    gulp.watch('./less/**/*.less', ['less']);
+  });
 })(require('gulp'), require('gulp-load-plugins'))

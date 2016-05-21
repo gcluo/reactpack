@@ -5,6 +5,7 @@ import Index from './index.jsx';
 import About from './about.jsx';
 import Inbox from './inbox.jsx';
 import {Router, Route, Link, IndexRoute, Redirect} from 'react-router';
+import '../../../css/main.css'
 export default class Dashboard extends React.Component {
   render() {
     return (
