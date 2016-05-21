@@ -1,18 +1,18 @@
 'use strict';
-import './less/main.less';
+// import './less/main.less';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Index from './modules/index.jsx';
-import About from './modules/about.jsx';
-import Inbox from './modules/inbox.jsx';
+import Index from './account/index.jsx';
+import About from './account/about.jsx';
+import Inbox from './account/inbox.jsx';
 import {Router, Route, Link, IndexRoute, Redirect} from 'react-router';
-var src = require('./assets/images/22.jpg');
+// var src = require('./assets/images/22.jpg');
 export default class Dashboard extends React.Component {
   render() {
     return (
       <div>
         <h1>welcome to index!</h1>
-        <img src={src} alt="123"/>
+        <img src={'assets/images/22.jpg'} alt="123"/>
       </div>
     );
   }

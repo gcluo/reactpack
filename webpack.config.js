@@ -9,10 +9,11 @@ var config = {
   entry: [
     'webpack/hot/dev-server',
     'webpack-dev-server/client?http://localhost:8080',
-    path.resolve(__dirname, 'app/main.js')
+    path.resolve(__dirname, 'app/scripts/modules/main.jsx')
   ],
   output: {
-    path: path.resolve(__dirname, 'build'),
+    path: path.resolve(__dirname, 'app'),
+    publicPath: "http://localhost:8080/",
     filename: 'app.js',
   },
   resolve: {

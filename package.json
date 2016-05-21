@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack",
-    "dev": "webpack-dev-server --devtool eval --progress --colors --hot --content-base build",
+    "dev": "webpack-dev-server --devtool eval --progress --colors --hot --content-base app",
     "deploy": "NODE_ENV=production webpack -p --config webpack.production.config.js && cp build/index.html dist/index.html"
   },
   "author": "",
@@ -20,15 +20,9 @@
     "react-router": "2.x"
   },
   "devDependencies": {
-    "css-loader": "^0.23.1",
     "expose-loader": "^0.7.1",
-    "file-loader": "^0.8.5",
-    "less": "^2.7.1",
-    "less-loader": "^2.2.3",
-    "node-sass": "^3.7.0",
-    "sass-loader": "^3.2.0",
-    "style-loader": "^0.13.1",
-    "url-loader": "^0.5.7",
+    "gulp": "^3.9.1",
+    "gulp-less": "^3.1.0",
     "webpack": "^1.13.0",
     "webpack-dev-server": "^1.14.1"
   }
