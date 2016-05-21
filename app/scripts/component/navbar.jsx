@@ -36,13 +36,13 @@ export default class NavBar extends React.Component {
           <a href="">我要XX</a>
         </li>
         <li>
-          <a href="">关于我的</a>
+          <a href="">关于我的XX</a>
         </li>
         <li>
           <a href="">我的社区</a>
         </li>
         <li>
-          <a href="/views/account.html">我的账户</a>
+          <a href="/app/views/account.html">我的账户</a>
         </li>
       </ul>
     );

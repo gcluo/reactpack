@@ -1,4 +1,5 @@
 var path = require('path');
+var webpack = require('webpack');
 var node_modules_dir = path.resolve(__dirname, 'node_modules');
 var deps = [
   'react/dist/react.min.js',
@@ -9,18 +10,18 @@ var config = {
   entry: {
     index: [
       'webpack/hot/dev-server',
-      'webpack-dev-server/client?http://localhost:8080',
+      'webpack-dev-server/client?http://localhost:8081',
       path.resolve(__dirname, 'app/scripts/modules/main.jsx')
     ],
     account: [
       'webpack/hot/dev-server',
-      'webpack-dev-server/client?http://localhost:8080',
+      'webpack-dev-server/client?http://localhost:8081',
       path.resolve(__dirname, 'app/scripts/modules/account/account.jsx')
     ]
   },
   output: {
     path: path.resolve(__dirname, 'app'),
-    publicPath: "http://localhost:8080/",
+    publicPath: "http://localhost:8081/js/",
     filename: '[name].js',
   },
   resolve: {
@@ -60,7 +61,11 @@ var config = {
       test: /\.ttf$/,
       loader: 'url?limit=100000'
     }]
-  }
+  },
+  plugins: [
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.NoErrorsPlugin()
+  ]
 };
 
 // 通过在第一部分路径的依赖和解压
