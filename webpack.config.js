@@ -6,15 +6,22 @@ var deps = [
   'react-router/umd/ReactRouter.min.js'
 ];
 var config = {
-  entry: [
-    'webpack/hot/dev-server',
-    'webpack-dev-server/client?http://localhost:8080',
-    path.resolve(__dirname, 'app/scripts/modules/main.jsx')
-  ],
+  entry: {
+    index: [
+      'webpack/hot/dev-server',
+      'webpack-dev-server/client?http://localhost:8080',
+      path.resolve(__dirname, 'app/scripts/modules/main.jsx')
+    ],
+    account: [
+      'webpack/hot/dev-server',
+      'webpack-dev-server/client?http://localhost:8080',
+      path.resolve(__dirname, 'app/scripts/modules/account/account.jsx')
+    ]
+  },
   output: {
     path: path.resolve(__dirname, 'app'),
     publicPath: "http://localhost:8080/",
-    filename: 'app.js',
+    filename: '[name].js',
   },
   resolve: {
     extensions: ['', '.js', '.jsx'],
