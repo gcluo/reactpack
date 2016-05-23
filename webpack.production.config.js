@@ -2,9 +2,10 @@ var path = require('path');
 var webpack = require('webpack');
 var node_modules_dir = path.resolve(__dirname, 'node_modules');
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
+var HtmlWebpackPlugin = require('html-webpack-plugin');
 var config = {
   entry: {
-    main: path.resolve(__dirname, 'app/scripts/modules/main.jsx'),
+    index: path.resolve(__dirname, 'app/scripts/modules/main.jsx'),
     account: path.resolve(__dirname, 'app/scripts/modules/account/account.jsx'),
     // mobile: path.resolve(__dirname, 'app/mobile.js'),
     // 当 React 作为一个 node 模块安装的时候，
@@ -13,7 +14,7 @@ var config = {
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: '[name].js' //多重入口定义
+    filename: 'scripts/[name].js' //多重入口定义
   },
   module: {
     loaders: [
@@ -37,14 +38,32 @@ var config = {
     ]
   },
   plugins: [
-    new webpack.optimize.CommonsChunkPlugin('vendors', 'vendors.js'),
+    new webpack.optimize.CommonsChunkPlugin('vendors', 'scripts/lib/vendors.js'),
     new webpack.optimize.UglifyJsPlugin({
       compress: {
         warnings: false
       }
     }),
-    new ExtractTextPlugin("main.css")
+    new ExtractTextPlugin("css/main.css")
   ]
 };
-
+var HtmlWebpackPluginConfig = {
+  template: 'app/template.html',
+  inject: 'body'
+};
+var htmlfiles = [
+  {
+    filename: 'views/account.html',
+    chunks: ['vendors', 'account']
+  }, {
+    filename: 'views/index.html',
+    chunks: ['vendors', 'index']
+  }
+];
+for (var i = 0; i < htmlfiles.length; i++) {
+  var htmlconfig = Object.create(HtmlWebpackPluginConfig);
+  htmlconfig['filename'] = htmlfiles[i].filename;
+  htmlconfig['chunks'] = htmlfiles[i].chunks;
+  config.plugins.push(new HtmlWebpackPlugin(htmlconfig));
+}
 module.exports = config;

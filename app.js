@@ -7,7 +7,7 @@
   }
   app.use('/app', express.static(path.join(__dirname, 'app')));
   app.get('/', function(req, res) {
-    res.sendFile(path.join(__dirname, 'app/index.html'));
+    res.sendFile(path.join(__dirname, 'app/views/index.html'));
   });
   server.listen(8080, function() {
     console.log('listened 8080 port server run!');

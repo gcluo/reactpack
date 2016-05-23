@@ -33,5 +33,5 @@ function main() {
         <Route path="inbox" component={Inbox}/>
       </Route>
     </Router>
-  ), document.getElementById('id'))
+  ), document.getElementById('root'))
 }
