@@ -49,7 +49,7 @@ th {
 }
 @font-face {
   font-family: 'iconfont';
-  src: url('../font/iconfont.ttf');
+  src: url('../assets/font/iconfont.ttf');
 }
 .iconfont {
   font-family: 'iconfont';

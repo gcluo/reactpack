@@ -14,7 +14,7 @@ var config = {
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'scripts/[name].js' //多重入口定义
+    filename: 'scripts/[name].[hash:8].js' //多重入口定义
   },
   module: {
     loaders: [
@@ -38,13 +38,13 @@ var config = {
     ]
   },
   plugins: [
-    new webpack.optimize.CommonsChunkPlugin('vendors', 'scripts/lib/vendors.js'),
+    new webpack.optimize.CommonsChunkPlugin('vendors', 'scripts/lib/vendors.[hash:8].js'),
     new webpack.optimize.UglifyJsPlugin({
       compress: {
         warnings: false
       }
     }),
-    new ExtractTextPlugin("css/main.css")
+    new ExtractTextPlugin("css/main.[hash:8].css")
   ]
 };
 var HtmlWebpackPluginConfig = {

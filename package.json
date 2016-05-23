@@ -6,7 +6,7 @@
   "scripts": {
     "build": "webpack",
     "dev": "gulp watch & NODE_ENV=dev node app",
-    "deploy": "NODE_ENV=production webpack -p --config webpack.production.config.js"
+    "deploy": "NODE_ENV=production webpack -p --config webpack.production.config.js && gulp cpassets"
   },
   "author": "",
   "license": "ISC",

@@ -49,12 +49,6 @@ var config = {
       test: /\.css$/, // Only .css files
       loader: 'style!css' // Run both loaders
     }, {
-      test: /\.scss$/,
-      loader: 'style!css!sass'
-    }, {
-      test: /\.less$/,
-      loader: 'style!css!less'
-    }, {
       test: /\.(png|jpg)$/,
       loader: 'url?limit=25000&name=assets/images/[name].[ext]'
     }, {

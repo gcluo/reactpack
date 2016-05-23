@@ -11,6 +11,10 @@
       .pipe($.less())
       .pipe(gulp.dest('app/css'));
   });
+  gulp.task('cpassets', function() {
+    return gulp.src('./app/assets/**/*.*')
+      .pipe(gulp.dest('dist/assets'));
+  });
   gulp.task('watch', ['less'], function() {
     gulp.watch('./less/**/*.less', ['less']);
   });
