@@ -6,7 +6,7 @@
   "scripts": {
     "build": "webpack",
     "dev": "gulp watch & NODE_ENV=dev node app",
-    "deploy": "NODE_ENV=production webpack -p --config webpack.production.config.js && cp build/index.html dist/index.html"
+    "deploy": "NODE_ENV=production webpack -p --config webpack.production.config.js"
   },
   "author": "",
   "license": "ISC",
@@ -22,6 +22,7 @@
   },
   "devDependencies": {
     "expose-loader": "^0.7.1",
+    "extract-text-webpack-plugin": "^1.0.1",
     "gulp": "^3.9.1",
     "gulp-less": "^3.1.0",
     "proxy-middleware": "^0.15.0",

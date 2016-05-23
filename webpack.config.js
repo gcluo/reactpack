@@ -21,7 +21,7 @@ var config = {
   },
   output: {
     path: path.resolve(__dirname, 'app'),
-    publicPath: "http://localhost:8081/js/",
+    publicPath: "http://localhost:8081/static/",
     filename: '[name].js',
   },
   resolve: {

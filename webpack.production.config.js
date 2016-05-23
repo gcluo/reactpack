@@ -1,9 +1,11 @@
 var path = require('path');
 var webpack = require('webpack');
 var node_modules_dir = path.resolve(__dirname, 'node_modules');
+var ExtractTextPlugin = require("extract-text-webpack-plugin");
 var config = {
   entry: {
-    app: path.resolve(__dirname, 'app/main.js'),
+    main: path.resolve(__dirname, 'app/scripts/modules/main.jsx'),
+    account: path.resolve(__dirname, 'app/scripts/modules/account/account.jsx'),
     // mobile: path.resolve(__dirname, 'app/mobile.js'),
     // 当 React 作为一个 node 模块安装的时候，
     // 我们可以直接指向它，就比如 require('react')
@@ -24,10 +26,7 @@ var config = {
         }
       }, { //import for css
         test: /\.css$/, // Only .css files
-        loader: 'style!css' // Run both loaders
-      }, {
-        test: /\.less$/,
-        loader: 'style!css!less'
+        loader: ExtractTextPlugin.extract("style-loader", "css-loader") // Run both loaders
       }, {
         test: /\.(png|jpg)$/,
         loader: 'url?limit=25000&name=assets/images/[name].[ext]'
@@ -43,7 +42,8 @@ var config = {
       compress: {
         warnings: false
       }
-    })
+    }),
+    new ExtractTextPlugin("main.css")
   ]
 };
 

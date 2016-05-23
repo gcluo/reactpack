@@ -7,5 +7,5 @@ import '../../css/main.css'
 main();
 function main() {
   ReactDOM.render(
-    <NavBar/>, document.body)
+    <NavBar/>, document.getElementById('id'))
 }

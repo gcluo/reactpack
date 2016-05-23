@@ -10,6 +10,6 @@
     res.sendFile(path.join(__dirname, 'app/index.html'));
   });
   server.listen(8080, function() {
-    console.log('server run!');
+    console.log('listened 8080 port server run!');
   });
 })(require('express'))

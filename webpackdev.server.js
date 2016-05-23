@@ -5,13 +5,13 @@ var proxy = require('proxy-middleware');
 var url = require('url');
 
 module.exports = function(app) {
-  app.use('/js', proxy(url.parse('http://localhost:8081/js')));
+  app.use('/static', proxy(url.parse('http://localhost:8081/static')));
   var server = new WebpackDevServer(webpack(config), {
     contentBase: __dirname,
     hot: true,
     quiet: false,
     noInfo: false,
-    publicPath: '/js/',
+    publicPath: '/static/',
     stats: {
       colors: true
     }

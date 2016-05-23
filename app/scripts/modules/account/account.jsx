@@ -4,8 +4,15 @@ import ReactDOM from 'react-dom';
 import Index from './index.jsx';
 import About from './about.jsx';
 import Inbox from './inbox.jsx';
-import {Router, Route, Link, IndexRoute, Redirect} from 'react-router';
-import '../../../css/main.css'
+import {
+  Router,
+  Route,
+  Link,
+  IndexRoute,
+  Redirect,
+  browserHistory
+} from 'react-router';
+import '../../../css/main.css';
 export default class Dashboard extends React.Component {
   render() {
     return (
@@ -20,11 +27,11 @@ main();
 function main() {
   ReactDOM.render((
     <Router>
-      <Route path="/" component={Index}>
+      <Route path="/" history={browserHistory} component={Index}>
         <IndexRoute component={Dashboard}/>
         <Route path="about" component={About}/>
         <Route path="inbox" component={Inbox}/>
       </Route>
     </Router>
-  ), document.body)
+  ), document.getElementById('id'))
 }
