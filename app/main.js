@@ -5,7 +5,14 @@ import ReactDOM from 'react-dom';
 import Index from './modules/index.jsx';
 import About from './modules/about.jsx';
 import Inbox from './modules/inbox.jsx';
-import {Router, Route, Link, IndexRoute, Redirect} from 'react-router';
+import {
+  Router,
+  Route,
+  Link,
+  IndexRoute,
+  Redirect,
+  hashHistory
+} from 'react-router';
 var src = require('./assets/images/22.jpg');
 export default class Dashboard extends React.Component {
   render() {
@@ -20,7 +27,7 @@ export default class Dashboard extends React.Component {
 main();
 function main() {
   ReactDOM.render((
-    <Router>
+    <Router history={hashHistory}>
       <Route path="/" component={Index}>
         <IndexRoute component={Dashboard}/>
         <Route path="about" component={About}/>
