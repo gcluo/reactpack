@@ -10,7 +10,7 @@ import {
   Link,
   IndexRoute,
   Redirect,
-  browserHistory
+  hashHistory
 } from 'react-router';
 import '../../../css/main.css';
 export default class Dashboard extends React.Component {
@@ -26,8 +26,8 @@ export default class Dashboard extends React.Component {
 main();
 function main() {
   ReactDOM.render((
-    <Router>
-      <Route path="/" history={browserHistory} component={Index}>
+    <Router history={hashHistory}>
+      <Route path="/" component={Index}>
         <IndexRoute component={Dashboard}/>
         <Route path="about" component={About}/>
         <Route path="inbox" component={Inbox}/>
