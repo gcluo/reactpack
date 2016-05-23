@@ -29,9 +29,6 @@ var config = {
         test: /\.css$/, // Only .css files
         loader: ExtractTextPlugin.extract("style-loader", "css-loader") // Run both loaders
       }, {
-        test: /\.(png|jpg)$/,
-        loader: 'url?limit=25000&name=assets/images/[name].[ext]'
-      }, {
         test: /\.ttf$/,
         loader: 'url?limit=100000'
       }
