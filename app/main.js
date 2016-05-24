@@ -34,5 +34,5 @@ function main() {
         <Route path="inbox" component={Inbox}/>
       </Route>
     </Router>
-  ), document.body)
+  ), document.getElementById('root'))
 }
