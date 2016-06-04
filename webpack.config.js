@@ -11,7 +11,7 @@ var config = {
     index: [
       'webpack/hot/dev-server',
       'webpack-dev-server/client?http://localhost:8081',
-      path.resolve(__dirname, 'app/scripts/modules/main.jsx')
+      path.resolve(__dirname, 'app/scripts/index.js')
     ],
     account: [
       'webpack/hot/dev-server',
