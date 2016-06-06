@@ -11,11 +11,14 @@
   //     .pipe($.less())
   //     .pipe(gulp.dest('app/css'));
   // });
-  gulp.task('scss', function({
+  gulp.task('scss', function(){
     return gulp.src('./scss/docs.scss')
-      .pipe($.scss({"bundleExec": true}))
+      .pipe($.sass({
+        outputStyle: 'expanded',
+        includePaths: [ './bower_components/' ]
+      }))
       .pipe(gulp.dest('app/css'));
-  }));
+  });
   gulp.task('cpassets', function() {
     return gulp.src('./app/assets/**/*.*')
       .pipe(gulp.dest('dist/assets'));
