@@ -3,7 +3,8 @@
     pattern: '*',
     lazy: true,
     rename: {
-      'gulp-less': 'less'
+      'gulp-less': 'less',
+      'gulp-inline-base64': 'b64'
     }
   });
   // gulp.task('less', function() {
@@ -16,6 +17,11 @@
       .pipe($.sass({
         outputStyle: 'expanded',
         includePaths: [ './bower_components/' ]
+      }))
+      .pipe($.b64({
+        baseDir: 'scss/',
+        maxSize: 14 * 1024,
+        debug: true
       }))
       .pipe(gulp.dest('app/css'));
   });

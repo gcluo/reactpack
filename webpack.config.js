@@ -16,7 +16,7 @@ var config = {
     homepage: [
       'webpack/hot/dev-server',
       'webpack-dev-server/client?http://localhost:8081',
-      path.resolve(__dirname, 'app/scripts/index.js')
+      path.resolve(__dirname, 'app/scripts/modules/homepage.js')
     ]
   },
   output: {

@@ -1,0 +1,24 @@
+.header{
+  height: 45px;
+  margin: 0 auto;
+  width: 960px;
+}
+.header-inline-block{
+  display: inline-block;
+}
+.header-search-form{
+  background-color: #ccc;
+  display: inline-block;
+  margin-left: 12px;
+  margin-top: 7px;
+  padding: 3px;
+}
+.header-search{
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  display: inline-block;
+  margin: 0;
+  outline: 0;
+  padding-left: 20px;
+  width: 300px;
+}
