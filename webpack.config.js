@@ -13,10 +13,10 @@ var config = {
       'webpack-dev-server/client?http://localhost:8081',
       path.resolve(__dirname, 'app/scripts/index.js')
     ],
-    account: [
+    homepage: [
       'webpack/hot/dev-server',
       'webpack-dev-server/client?http://localhost:8081',
-      path.resolve(__dirname, 'app/scripts/modules/account/account.jsx')
+      path.resolve(__dirname, 'app/scripts/index.js')
     ]
   },
   output: {
