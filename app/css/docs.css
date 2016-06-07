@@ -433,22 +433,76 @@ output {
   content: "";
 }
 
+.header-top {
+  border-bottom: 1px solid #bbb;
+  padding: 10px 0;
+  margin-bottom: 10px;
+}
+
+.header-top:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
 .header {
   height: 45px;
   margin: 0 auto;
-  width: 960px;
+  width: 1050px;
 }
 
-.header-inline-block {
-  display: inline-block;
+.header-profile {
+  float: right;
+  height: 45px;
+  overflow: hidden;
+  position: relative;
+  text-indent: 46px;
+  text-overflow: ellipsis;
+  width: 120px;
+}
+
+.header-profile .avatar {
+  width: 25px;
+  height: 25px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  display: block;
+  left: 10px;
+  position: absolute;
+  top: 9px;
+}
+
+.header-profile > span {
+  line-height: 45px;
+}
+
+.header-link {
+  color: black;
+  float: left;
+  line-height: 45px;
+  height: 100%;
+  text-decoration: none;
 }
 
 .header-search-form {
   background-color: #ccc;
   display: inline-block;
+  float: left;
   margin-left: 12px;
+  margin-right: 12px;
   margin-top: 7px;
   padding: 3px;
+  position: relative;
+}
+
+.header-search-button {
+  color: grey;
+  font-family: 'iconfont';
+  font-size: 16px;
+  position: absolute;
+}
+
+.header-search-button:before {
+  content: '\e600';
 }
 
 .header-search {
@@ -461,7 +515,80 @@ output {
   width: 300px;
 }
 
+.header-menu {
+  float: left;
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+}
+
+.header-menu:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.header-menu > li {
+  float: left;
+}
+
+.header-menu a {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  color: black;
+  display: block;
+  line-height: 45px;
+  height: 100%;
+  width: 54px;
+  text-align: center;
+}
+
+.header-menu a:hover {
+  text-decoration: none;
+}
+
 .news {
   width: 960px;
   margin: 0 auto;
+}
+
+.news-header {
+  margin-bottom: 10px;
+}
+
+.news-title {
+  margin-bottom: 10px;
+}
+
+.news-list {
+  list-style: none;
+  margin-bottom: 10px;
+  padding-left: 0;
+}
+
+.news-list > li {
+  margin-bottom: 10px;
+}
+
+.news-list > li > a {
+  color: black;
+}
+
+.news-list > li > a:hover {
+  text-decoration: none;
+}
+
+.news-list > li:before {
+  width: 10px;
+  height: 10px;
+  background-color: black;
+  border-radius: 50%;
+  content: '';
+  display: inline-block;
+  margin-right: 10px;
+  margin-bottom: 2px;
+}
+
+.news-section {
+  min-height: 100px;
 }

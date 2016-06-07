@@ -1,17 +1,61 @@
+$header-height: 45px;
+.header-top{
+  @include clearfix();
+  border-bottom: 1px solid #bbb;
+  padding: 10px 0;
+  margin-bottom: 10px;
+}
 .header{
   height: 45px;
   margin: 0 auto;
-  width: 960px;
+  width: 1050px;
 }
-.header-inline-block{
-  display: inline-block;
+.header-profile{
+  float: right;
+  height: $header-height;
+  overflow: hidden;
+  position: relative;
+  text-indent: 46px;
+  text-overflow: ellipsis;
+  width: 120px;
+  .avatar{
+    @include size(25px, 25px);
+    border: 1px solid rgba(0,0,0,.1);
+    display: block;
+    left: 10px;
+    position: absolute;
+    top: 9px;
+  }
+  >span{
+    line-height: $header-height;
+
+  }
+}
+.header-link{
+  color: black;
+  float: left;
+  line-height: $header-height;
+  height: 100%;
+  text-decoration: none;
 }
 .header-search-form{
   background-color: #ccc;
   display: inline-block;
+  float: left;
   margin-left: 12px;
+  margin-right: 12px;
   margin-top: 7px;
   padding: 3px;
+  position: relative;
+}
+.header-search-button{
+  color: grey;
+  font-family: 'iconfont';
+  font-size: 16px;
+  position: absolute;
+  &:before{
+    content: '\e600';
+  }
 }
 .header-search{
   border-radius: 5px;
@@ -21,4 +65,27 @@
   outline: 0;
   padding-left: 20px;
   width: 300px;
+}
+.header-menu{
+  float: left;
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+  @include clearfix();
+  >li{
+    float: left;
+  }
+  a{
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    color: black;
+    display: block;
+    line-height: $header-height;
+    height: 100%;
+    width: 54px;
+    text-align: center;
+    &:hover{
+      text-decoration: none;
+    }
+  }
 }

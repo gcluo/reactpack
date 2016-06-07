@@ -2,3 +2,35 @@
   width: 960px;
   margin: 0 auto;
 }
+.news-header{
+  margin-bottom: 10px;
+}
+.news-title{
+  margin-bottom: 10px;
+}
+.news-list{
+  list-style: none;
+  margin-bottom: 10px;
+  padding-left: 0;
+  >li{
+    margin-bottom: 10px;
+    >a{
+      color: black;
+      &:hover{
+        text-decoration: none;
+      }
+    }
+    &:before{
+      @include size(10px, 10px);
+      background-color: black;
+      border-radius: 50%;
+      content: '';
+      display: inline-block;
+      margin-right: 10px;
+      margin-bottom: 2px;
+    }
+  }
+}
+.news-section{
+  min-height: 100px;
+}
