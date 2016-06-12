@@ -1,6 +1,5 @@
 import React from 'react'
 import { connect } from 'react-redux'
-// import Homepage from '../components/homepage/index'
 import Header from '../components/common/header'
 import News from '../components/homepage/news'
 import '../../css/docs.css'
