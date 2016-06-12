@@ -1,0 +1,15 @@
+.special-search{
+  background-color: grey;
+  margin-bottom: 20px;
+  padding: 4px;
+  position: relative;
+  >.search-button{
+    top: 8px;
+    left: 10px;
+  }
+  >input{
+    outline: 0;
+    padding-left: 30px;
+    width: 100%;
+  }
+}

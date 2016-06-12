@@ -17,7 +17,7 @@
       .pipe($.sass({
         outputStyle: 'expanded',
         includePaths: [ './bower_components/' ]
-      }))
+      }).on('error', $.sass.logError))
       .pipe($.b64({
         baseDir: 'scss/',
         maxSize: 14 * 1024,

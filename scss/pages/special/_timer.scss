@@ -1,0 +1,40 @@
+.special-timer{
+  list-style: none;
+  padding-left: 0;
+  margin-left: 30px;
+  &>li:not(:first-child){
+    border-left: 1px solid grey;
+  }
+  .time{
+    position: relative;
+    margin-bottom: 20px;
+    padding-left: 18px;
+    &:before{
+      content: '\e603';
+      display: inline-block;
+      font-family: 'iconfont';
+      font-size: 18px;
+      left: -7px;
+      position: absolute;
+      top: 0px;
+    }
+  }
+  .time-info{
+    list-style: none;
+    margin-left: 50px;
+    padding-left: 0;
+    padding-bottom: 20px;
+    &>li:first-child{
+      position: relative;
+      &:before{
+        content: '\e602';
+        display: inline-block;
+        font-family: 'iconfont';
+        font-size: 18px;
+        left: -30px;
+        position: absolute;
+        top: 0px;
+      }
+    }
+  }
+}

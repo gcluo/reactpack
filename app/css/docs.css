@@ -592,3 +592,73 @@ output {
 .news-section {
   min-height: 100px;
 }
+
+.special-header {
+  background-color: #2ea69b;
+  padding-left: 25px;
+}
+
+.special-search {
+  background-color: grey;
+  margin-bottom: 20px;
+  padding: 4px;
+  position: relative;
+}
+
+.special-search > .search-button {
+  top: 8px;
+  left: 10px;
+}
+
+.special-search > input {
+  outline: 0;
+  padding-left: 30px;
+  width: 100%;
+}
+
+.special-timer {
+  list-style: none;
+  padding-left: 0;
+  margin-left: 30px;
+}
+
+.special-timer > li:not(:first-child) {
+  border-left: 1px solid grey;
+}
+
+.special-timer .time {
+  position: relative;
+  margin-bottom: 20px;
+  padding-left: 18px;
+}
+
+.special-timer .time:before {
+  content: '\e603';
+  display: inline-block;
+  font-family: 'iconfont';
+  font-size: 18px;
+  left: -7px;
+  position: absolute;
+  top: 0px;
+}
+
+.special-timer .time-info {
+  list-style: none;
+  margin-left: 50px;
+  padding-left: 0;
+  padding-bottom: 20px;
+}
+
+.special-timer .time-info > li:first-child {
+  position: relative;
+}
+
+.special-timer .time-info > li:first-child:before {
+  content: '\e602';
+  display: inline-block;
+  font-family: 'iconfont';
+  font-size: 18px;
+  left: -30px;
+  position: absolute;
+  top: 0px;
+}
