@@ -1,0 +1,72 @@
+.article-main{
+  margin: 60px auto;
+  width: 960px;
+  @include clearfix();
+}
+.article-author{
+  float: left;
+  .avatar{
+    @include size(80px, 80px);
+    border-radius: 50%;
+    border: 1px solid #ccc;
+  }
+  .description{
+    text-align: center;
+  }
+}
+$read-height: 100px;
+.article-content{
+  float: left;
+  margin-left: 30px;
+  width: 60%;
+  .title{
+
+  }
+  .time{
+    border-right: 2px solid grey;
+    display: inline-block;
+    width: 90px;
+    text-align: left;
+  }
+  .share{
+    display: inline-block;
+    margin-left: 15px;
+    &:before{
+      content: '\e601';
+      font-size: 18px;
+      font-family: 'iconfont';
+    }
+  }
+  .read{
+    border: 1px solid #aaa;
+    height: $read-height;
+    min-height: $read-height;
+    margin-bottom: 20px;
+    &>span:first-child{
+      border-right: 1px solid #bbb;
+      float: left;
+      line-height: 50px;
+      height: $read-height - 2;
+      width: 8%;
+      text-align: center;
+    }
+    &>span:last-child{
+      float: left;
+      height: $read-height - 2;
+      text-indent: 2em;
+      width: 92%;
+    }
+    @include clearfix();
+  }
+  .content{
+
+  }
+  .footer{
+    background-color: rgb(51, 51, 51);
+    color: #fff;
+    padding: 5px;
+    &>p{
+      margin-bottom: 10px;
+    }
+  }
+}

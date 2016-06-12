@@ -4,9 +4,3 @@ export const special = (condition) => {
     condition
   }
 }
-export const items = () => {
-  return {
-    type: 'ITEMS',
-    messages
-  }
-}

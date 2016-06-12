@@ -662,3 +662,92 @@ output {
   position: absolute;
   top: 0px;
 }
+
+.article-main {
+  margin: 60px auto;
+  width: 960px;
+}
+
+.article-main:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.article-author {
+  float: left;
+}
+
+.article-author .avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+}
+
+.article-author .description {
+  text-align: center;
+}
+
+.article-content {
+  float: left;
+  margin-left: 30px;
+  width: 60%;
+}
+
+.article-content .time {
+  border-right: 2px solid grey;
+  display: inline-block;
+  width: 90px;
+  text-align: left;
+}
+
+.article-content .share {
+  display: inline-block;
+  margin-left: 15px;
+}
+
+.article-content .share:before {
+  content: '\e601';
+  font-size: 18px;
+  font-family: 'iconfont';
+}
+
+.article-content .read {
+  border: 1px solid #aaa;
+  height: 100px;
+  min-height: 100px;
+  margin-bottom: 20px;
+}
+
+.article-content .read > span:first-child {
+  border-right: 1px solid #bbb;
+  float: left;
+  line-height: 50px;
+  height: 98px;
+  width: 8%;
+  text-align: center;
+}
+
+.article-content .read > span:last-child {
+  float: left;
+  height: 98px;
+  text-indent: 2em;
+  width: 92%;
+}
+
+.article-content .read:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.article-content .footer {
+  background-color: #333333;
+  color: #fff;
+  padding: 5px;
+}
+
+.article-content .footer > p {
+  margin-bottom: 10px;
+}

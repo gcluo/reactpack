@@ -22,6 +22,11 @@ var config = {
       'webpack/hot/dev-server',
       'webpack-dev-server/client?http://localhost:8081',
       path.resolve(__dirname, 'app/scripts/modules/special.js')
+    ],
+    article: [
+      'webpack/hot/dev-server',
+      'webpack-dev-server/client?http://localhost:8081',
+      path.resolve(__dirname, 'app/scripts/modules/article.js')
     ]
   },
   output: {

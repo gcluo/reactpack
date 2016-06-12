@@ -1,3 +1,22 @@
+.special-header{
+  background-color: rgb(46, 166, 155);
+  padding-left: 25px;
+}
+.special-search{
+  background-color: grey;
+  margin-bottom: 20px;
+  padding: 4px;
+  position: relative;
+  >.search-button{
+    top: 8px;
+    left: 10px;
+  }
+  >input{
+    outline: 0;
+    padding-left: 30px;
+    width: 100%;
+  }
+}
 .special-timer{
   list-style: none;
   padding-left: 0;
