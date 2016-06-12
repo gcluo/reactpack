@@ -5,12 +5,14 @@ var ExtractTextPlugin = require("extract-text-webpack-plugin");
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var config = {
   entry: {
-    index: path.resolve(__dirname, 'app/scripts/modules/main.jsx'),
-    account: path.resolve(__dirname, 'app/scripts/modules/account/account.jsx'),
+    index: path.resolve(__dirname, 'app/scripts/index.js'),
+    homepage: path.resolve(__dirname, 'app/scripts/modules/homepage.js'),
+    special: path.resolve(__dirname, 'app/scripts/modules/special.js'),
+    article: path.resolve(__dirname, 'app/scripts/modules/article.js'),
     // mobile: path.resolve(__dirname, 'app/mobile.js'),
     // 当 React 作为一个 node 模块安装的时候，
     // 我们可以直接指向它，就比如 require('react')
-    vendors: ['react', 'react-dom', 'react-router']
+    vendors: ['react', 'react-dom', 'react-router', 'react-redux', 'redux']
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -35,6 +37,9 @@ var config = {
     ]
   },
   plugins: [
+    new webpack.DefinePlugin({
+      'process.env.NODE_ENV': '"production"'
+    }),
     new webpack.optimize.CommonsChunkPlugin('vendors', 'scripts/lib/vendors.[hash:8].js'),
     new webpack.optimize.UglifyJsPlugin({
       compress: {
@@ -50,9 +55,18 @@ var HtmlWebpackPluginConfig = {
 };
 var htmlfiles = [
   {
-    filename: 'views/account.html',
-    chunks: ['vendors', 'account']
-  }, {
+    filename: 'views/homepage.html',
+    chunks: ['vendors', 'homepage']
+  },
+  {
+    filename: 'views/special.html',
+    chunks: ['vendors', 'special']
+  },
+  {
+    filename: 'views/article.html',
+    chunks: ['vendors', 'article']
+  },
+  {
     filename: 'views/index.html',
     chunks: ['vendors', 'index']
   }
