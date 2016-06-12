@@ -3,7 +3,10 @@ import React from 'react'
 const Li= ({time, message, from}) => {
   console.log(message);
   return (
-    <li>
+    <li onClick={e => {
+      e.preventDefault()
+      window.location.href="article.html"
+    }}>
       <ul className="time-info">
         <li>{time}</li>
         <li>{message}</li>

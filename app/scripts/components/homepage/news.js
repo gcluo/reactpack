@@ -6,10 +6,10 @@ const News = () => (
     <section className="news-section">
       <header className="news-title">百度魏则西专题</header>
       <ul className="news-list">
-        <li><a href="">文章1</a></li>
-        <li><a href="">文章2</a></li>
-        <li><a href="">文章3</a></li>
-        <li><a href="">文章4</a></li>
+        <li><a href="special.html">文章1</a></li>
+        <li><a href="special.html">文章2</a></li>
+        <li><a href="special.html">文章3</a></li>
+        <li><a href="special.html">文章4</a></li>
       </ul>
     </section>
     <section className="news-section">

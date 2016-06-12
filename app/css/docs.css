@@ -643,6 +643,7 @@ output {
 }
 
 .special-timer .time-info {
+  cursor: pointer;
   list-style: none;
   margin-left: 50px;
   padding-left: 0;
@@ -703,6 +704,7 @@ output {
 }
 
 .article-content .share {
+  cursor: pointer;
   display: inline-block;
   margin-left: 15px;
 }
