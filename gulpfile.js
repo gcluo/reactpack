@@ -14,10 +14,7 @@
   // });
   gulp.task('scss', function(){
     return gulp.src('./scss/docs.scss')
-      .pipe($.sass({
-        outputStyle: 'expanded',
-        includePaths: [ './bower_components/' ]
-      }).on('error', $.sass.logError))
+      .pipe($.sass().on('error', $.sass.logError))
       .pipe($.b64({
         baseDir: 'scss/',
         maxSize: 14 * 1024,
