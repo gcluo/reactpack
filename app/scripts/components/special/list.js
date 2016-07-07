@@ -1,7 +1,6 @@
 import React from 'react'
 
 const Li= ({time, message, from}) => {
-  console.log(message);
   return (
     <li onClick={e => {
       e.preventDefault()
